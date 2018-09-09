@@ -652,15 +652,6 @@ class SettingHandler(RequestHandler):
             self.write({'accesskey': accesskey, 'accesskeyenable': accesskeyenable})
             self.finish()
 
-        '''
-        code:
-        msg:
-        data:
-          version:
-          build:
-          releasetime:
-          changelog: url
-        '''
         elif section == 'upver':
             force = self.get_argument('force', '')
             lastcheck = self.config.getint('server', 'lastcheckupdate')
