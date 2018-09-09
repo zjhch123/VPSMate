@@ -2402,7 +2402,7 @@ class BackendHandler(RequestHandler):
 
         # install the latest version
         http = tornado.httpclient.AsyncHTTPClient()
-        response = yield tornado.gen.Task(http.fetch, 'http://www.vpsmate.org/api/latest')
+        response = yield tornado.gen.Task(http.fetch, 'https://raw.githubusercontent.com/zjhch123/VPSMate/master/version')
         if response.error:
             self._update_job('update', -1, u'获取版本信息失败！')
             return

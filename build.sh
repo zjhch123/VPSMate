@@ -1,0 +1,1 @@
+tar -cvzpf vpsmate.tar.gz --exclude .git ./
