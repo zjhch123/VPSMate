@@ -1,5 +1,5 @@
 var releasetime = '2018-09-09 21:32:00 CST';
-var _v = new Date(releasetime.replace(/-/g, '/')).getTime()/1000;
+var _v = Math.random().toString(36);
 //if (1) _v += Math.random();	// ie test mode
 angular.module('vpsmate', ['vpsmate.services', 'vpsmate.directives', 'vpsmate.filters']).
 config(['$routeProvider', function($routeProvider) {
@@ -70,12 +70,7 @@ run(['$rootScope', '$location', 'Request', function($rootScope, $location, Reque
 
 	$rootScope.$proxyroot = location_path;
 }]).
-value('version', {
-	'version': '1.1',
-	'build': '11',
-	'releasetime': releasetime,
-	'changelog': 'https://github.com/zjhch123/VPSMate'
-});
+value('version', window.version);
 
 var Auth = {
 	// auth should be done before enter the module
