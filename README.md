@@ -22,3 +22,4 @@ This is special edition (fork) of VPSMate with many features not existing on VPS
 2. v1.0b11 - 修复获取版本号错误的问题
 3. v1.0b12 - 完善自动更新功能
 4. v1.0b13 - 更新前端代码，增加协助开发者著名，用户社区改为github issue
+5. v1.0b14 - 修复前端代码小问题，增加文件拖拽上传功能

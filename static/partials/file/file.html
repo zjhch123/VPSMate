@@ -220,7 +220,7 @@
   </div>
 </div>
 
-<div id="upload" class="modal hide fade">
+<div id="upload" class="modal hide fade" ng-drop="dropFile()">
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
     <h3>上传文件到当前目录</h3>
@@ -229,16 +229,15 @@
 	<div style="margin:10px 20px">
 	<h5>请选择您要上传的文件：</h5>
 	<div ng-include src="'/xsrf'"></div>
-	<form id="uploadform" class="pull-left" target="uploadframe" action="/fileupload" enctype="multipart/form-data" method="post" onsubmit="$('#_xsrf').val(getCookie('XSRF-TOKEN'))">
-        <input type="hidden" name="_xsrf" value="" id="_xsrf">
-        <input type="hidden" name="path" value="{{curpath}}">
-        <input name="ufile" type="file">
-    </form>
-	<button class="btn btn-small" ng-click="doupload()">开始上传</button>
-	<iframe frameborder="0" name="uploadframe" width="100%" height="50"></iframe>
+	<form id="uploadform" target="uploadframe" action="/fileupload" enctype="multipart/form-data" method="post" onsubmit="$('#_xsrf').val(getCookie('XSRF-TOKEN'))" style="margin: 0;">
+		<input type="hidden" name="_xsrf" value="" id="_xsrf">
+		<input type="hidden" name="path" value="{{curpath}}">
+		<input name="ufile" type="file" style="height: 80px;">
+	</form>
 	</div>
   </div>
   <div class="modal-footer">
+		<button class="btn" ng-click="doupload()" style="margin-right: 8px">开始上传</button>
     <button class="btn" data-dismiss="modal" aria-hidden="true" ng-click="listdir()">关闭</button>
   </div>
 </div>

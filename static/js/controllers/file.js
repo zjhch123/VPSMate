@@ -261,6 +261,9 @@ function($scope, $routeParams, Module, Message, Request, Backend){
 	$scope.upload = function(){
 		$('#upload').modal();
 	};
+	$scope.dropFile = function(e){
+		console.log(e)
+	};
 	$scope.doupload = function(){
 		var pathinfo = $('#uploadform').find('input[name=ufile]').val().split(/[\\\/]/);
 		var name = pathinfo[pathinfo.length-1];
