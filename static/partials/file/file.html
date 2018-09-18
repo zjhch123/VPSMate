@@ -226,14 +226,15 @@
     <h3>上传文件到当前目录</h3>
   </div>
   <div class="modal-body">
-	<div style="margin:10px 20px">
-	<h5>请选择您要上传的文件：</h5>
-	<div ng-include src="'/xsrf'"></div>
-	<form id="uploadform" target="uploadframe" action="/fileupload" enctype="multipart/form-data" method="post" onsubmit="$('#_xsrf').val(getCookie('XSRF-TOKEN'))" style="margin: 0;">
-		<input type="hidden" name="_xsrf" value="" id="_xsrf">
-		<input type="hidden" name="path" value="{{curpath}}">
-		<input name="ufile" type="file" style="height: 80px;">
-	</form>
+	<div style="margin:10px 20px;position: relative;">
+		<h5>请选择您要上传的文件：</h5>
+		<div ng-include src="'/xsrf'"></div>
+		<form id="uploadform" target="uploadframe" action="/fileupload" enctype="multipart/form-data" method="post" onsubmit="$('#_xsrf').val(getCookie('XSRF-TOKEN'))" style="margin: 0;">
+			<input type="hidden" name="_xsrf" value="" id="_xsrf">
+			<input type="hidden" name="path" value="{{curpath}}">
+			<input name="ufile" type="file" style="height: 120px;width:100%;">
+		</form>
+		<iframe frameborder="0" name="uploadframe" width="100%" height="50" style="position: absolute;bottom: 0;left: 0;pointer-events: none;"></iframe>
 	</div>
   </div>
   <div class="modal-footer">
