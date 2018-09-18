@@ -25,3 +25,4 @@ This is special edition (fork) of VPSMate with many features not existing on VPS
 5. v1.0b14 - 修复前端代码小问题，增加文件拖拽上传功能
 6. v1.0b15 - 紧急修复用户反馈的自动更新失败的问题
 7. v1.0b16 - 优化样式
+8. v1.0b17 - 优化样式
