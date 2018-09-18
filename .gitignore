@@ -2,3 +2,4 @@
 *.pyc
 *.iml
 vpsmate.tar.gz
+.DS_Store
